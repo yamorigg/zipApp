@@ -34,7 +34,7 @@ function getHistory(){
         let historyDiv = document.getElementById('history');
         history.forEach(item => {
             let p = document.createElement('p');
-            p.textContent = item.zipCode + ' : ' + item.address;
+            p.textContent = item.zip_code + ' : ' + item.address;
             historyDiv.appendChild(p);
             });       
     })
