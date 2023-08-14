@@ -6,7 +6,7 @@ if($zipCode==='') {
     echo 'Error:郵便番号が入力されていません';
     exit;
 }
-$zipCode = mb_convert_kana($zipCode, 'a');
+
 $zipCode = preg_replace('/[^0-9]/', '', $zipCode);
 if (!preg_match("/^[0-9]{7}$/", $zipCode)) {
     echo 'Error:郵便番号は半角数字7桁で入力してください'. $zipCode;
