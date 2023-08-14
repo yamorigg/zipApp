@@ -28,7 +28,7 @@ $addressModel->save($zipCode, $address);
 echo $address;
 
 function fetchFromAPI($zipCode) {
-    private $appId =""; // Yahoo!デベロッパーで取得したアプリケーションIDを入力
+    $appId =""; // Yahoo!デベロッパーで取得したアプリケーションIDを入力
     $url = 'https://map.yahooapis.jp/search/zip/V1/zipCodeSearch?query=' . $zipCode . '&results=1&appid=' . $appId .'&output=json';
     $response = file_get_contents($url);
     $response = json_decode($response);
