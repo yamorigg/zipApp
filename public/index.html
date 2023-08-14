@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>住所検索</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <h1>郵便番号から住所検索</h1>
+    <form onsubmit="getAddress(event); return false;">
+        <input id="zipCode" type="text" name="zipCode" placeholder="郵便番号を入力してください">
+        <button type="submit">検索</button>
+        <div id="errorMsg" style='color:red'></div>
+
+    </form>
+    <section>
+        <h2>検索結果</h2>
+        <div id="result"></div>
+    </section>
+    <section>
+        <h2>検索履歴</h2>
+        <div id="history"></div>
+    </section>
+
+</body>
